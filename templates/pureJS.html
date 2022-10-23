@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <script language="JavaScript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+
+</head>
+<body>
+
+
+<form method="GET" action='/showSearchResults'>
+
+    Searchbox <input class='k7' type="text" name='qry' autofocus autocomplete="off" placeholder="TypeHere">
+    <!-- input type="Submit" value='Lets Search'-->
+    <ul></ul>
+
+</form>
+  <script language="JavaScript">
+
+        let ip = document.querySelector('input');
+        /*alert('Got here 1' + ip);*/
+        ip.onkeyup = function () {
+        /*alert('Got here 2' + ip);*/
+            $.get('/showPureJSSearchResults?qry=' + ip.value, function (data) {
+                    document.querySelector('ul').innerText = data;
+                }
+            )
+
+        };
+  </script>
+</body>

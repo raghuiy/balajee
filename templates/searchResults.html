@@ -1,0 +1,16 @@
+<!--#include virtual="search.html" -->
+{% extends "search.html"%}
+{% block body %}
+
+
+<h1> Welcome to search results.</h1>
+You searched for <b>{{ query }}</b><br><br>Here are the results..<br>
+{% for eachWord in queryResults: %}
+{{eachWord}} <br>
+{% endfor %}
+
+Click <a href="/search" >here</a> to go back to Search
+
+
+{% endblock  %}
+

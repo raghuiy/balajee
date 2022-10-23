@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h1 align="center"> Welcome to {{pr_name}}
+</h1>
+<form name="colorChoice"   id='munsamy' action="/showResults" method="GET">
+    Name your favourite color <select name="favColor"  >
+    {% for color  in t_colours %}
+    <option value="{{ color  }}" > {{ color }} </option>
+    {% endfor %}
+
+
+</select><br>
+    <input type='submit' value="Choose" >
+</form>
+{% endblock %}

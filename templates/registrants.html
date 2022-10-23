@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h1 align ='Center'> Welcome to Registrants
+</h1>
+<br><br>
+<table  align="center" style='border:2px solid red'>
+<tr align='center' style='border:2px solid red'><th   border:2px solid red'> Choice id</th> <th style='border:2px solid red'> Reg_id</th><th style='border:2px solid red'> Color</th>
+   </tr>
+
+
+{% for rows in RG %}
+<tr style='border:1px solid red'>
+    {% for cell in rows %}
+ <td style='border:1px solid red' align="center"> {{ cell }} </td>
+
+    {%endfor%}
+    </tr>
+{%endfor%}
+</div>
+</table>
+
+<br><br><br>
+<p align ='Center'>Click  <a href="/Sirs"><b>here</b></a> to go back to first page
+</p>
+    {% endblock %}
